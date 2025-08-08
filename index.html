@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa del Diploma IB - Empodera tu Futuro con Educación de Calidad</title>
+    <meta name="description" content="Descubre el Programa del Diploma del Bachillerato Internacional® (IB) - Educación de calidad mundial que prepara a los estudiantes para el éxito universitario y profesional.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="estilos.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'ib-blue': {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        'accent-cyan': '#06b6d4',
+                        'accent-yellow': '#eab308',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-in-left': 'slideInLeft 0.6s ease-out',
+                        'slide-in-right': 'slideInRight 0.6s ease-out',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-soft': 'pulseSoft 2s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-900 overflow-x-hidden">
+    <!-- Navegación -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-ib-blue-600 to-accent-cyan rounded-lg flex items-center justify-center shadow-lg">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-ib-blue-800">IB Diploma</span>
+                    </div>
+                </div>
+                
+                <!-- Menú Desktop -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="text-ib-blue-800 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Inicio</a>
+                        <a href="#programa" class="text-gray-600 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Programa</a>
+                        <a href="#beneficios" class="text-gray-600 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Beneficios</a>
+                        <a href="#proyectos" class="text-gray-600 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Proyectos</a>
+                        <a href="#testimonios" class="text-gray-600 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Testimonios</a>
+                        <a href="https://admision.colegioelpinar.edu.pe/" target="_blank" rel="noopener" class="text-gray-600 hover:text-accent-cyan px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105">Contacto</a>
+                    </div>
+                </div>
+                
+                <!-- Botón móvil -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-accent-cyan hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent-cyan transition-all duration-300">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-ib-blue-800 hover:text-accent-cyan hover:bg-gray-50 rounded-md transition-all duration-300">Inicio</a>
+                <a href="#programa" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-accent-cyan hover:bg-gray-50 rounded-md transition-all duration-300">Programa</a>
+                <a href="#beneficios" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-accent-cyan hover:bg-gray-50 rounded-md transition-all duration-300">Beneficios</a>
+                <a href="#proyectos" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-accent-cyan hover:bg-gray-50 rounded-md transition-all duration-300">Proyectos</a>
+                <a href="#testimonios" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-accent-cyan hover:bg-gray-50 rounded-md transition-all duration-300">Testimonios</a>
+                <a href="https://admision.colegioelpinar.edu.pe/" target="_blank" rel="noopener" class="block px-3 py-2 text-base font-medium text-gray-600 hover:text-accent-cyan hover:bg-gray-50 rounded-md transition-all duration-300">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Héroe -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Fondo con gradiente -->
+        <div class="absolute inset-0 bg-gradient-to-br from-ib-blue-900 via-ib-blue-800 to-ib-blue-700"></div>
+        
+        <!-- Imagen de fondo -->
+        <div class="absolute inset-0 opacity-20">
+            <img src="./images/hero-background.jpg" alt="Estudiantes IB" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Efectos de fondo sutiles -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating-elements"></div>
+        </div>
+        
+        <!-- Contenido principal -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="hero-content">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+                    Empodera tu Futuro con
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-yellow animate-glow block mt-2">
+                        Educación de Calidad
+                    </span>
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Descubre el Programa del Diploma del Bachillerato Internacional® y prepárate para el éxito universitario y profesional con una educación reconocida mundialmente.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="enhanced-button-primary group relative overflow-hidden">
+                        <span class="relative z-10">Descubre el Diploma IB</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-accent-cyan to-ib-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </button>
+                    <button class="enhanced-button-secondary group relative overflow-hidden">
+                        <span class="relative z-10">Más Información</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Indicador de scroll -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-accent-cyan animate-pulse"></i>
+        </div>
+    </section>
+
+    <!-- Sección Información del Programa -->
+    <section id="programa" class="py-20 bg-white relative overflow-hidden">
+        <!-- Efectos de fondo sutiles -->
+        <div class="absolute inset-0">
+            <div class="subtle-pattern"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-3xl md:text-5xl font-black text-ib-blue-800 mb-6">
+                    ¿Qué es el Programa del Diploma IB?
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-accent-cyan to-accent-yellow mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    El Programa del Diploma del Bachillerato Internacional® es un programa educativo riguroso y equilibrado destinado a estudiantes de 16 a 19 años que los prepara para el éxito universitario y la vida adulta.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="enhanced-card group">
+                    <div class="enhanced-card-border"></div>
+                    <div class="enhanced-card-content">
+                        <div class="w-20 h-20 bg-gradient-to-r from-ib-blue-500 to-accent-cyan rounded-full flex items-center justify-center mb-6 mx-auto shadow-lg animate-float">
+                            <i data-lucide="globe" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-ib-blue-800 mb-4">Reconocimiento Internacional</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Reconocido por universidades de prestigio en todo el mundo, el diploma IB abre puertas a oportunidades educativas globales.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="enhanced-card group">
+                    <div class="enhanced-card-border enhanced-border-accent"></div>
+                    <div class="enhanced-card-content">
+                        <div class="w-20 h-20 bg-gradient-to-r from-accent-yellow to-ib-blue-500 rounded-full flex items-center justify-center mb-6 mx-auto shadow-lg animate-float">
+                            <i data-lucide="award" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-ib-blue-800 mb-4">Educación de Calidad</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Desarrolla habilidades de pensamiento crítico, investigación y comunicación a través de un currículo riguroso y equilibrado.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="enhanced-card group">
+                    <div class="enhanced-card-border enhanced-border-secondary"></div>
+                    <div class="enhanced-card-content">
+                        <div class="w-20 h-20 bg-gradient-to-r from-accent-cyan to-accent-yellow rounded-full flex items-center justify-center mb-6 mx-auto shadow-lg animate-float">
+                            <i data-lucide="users" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-ib-blue-800 mb-4">Formación Integral</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Fomenta el desarrollo personal, emocional y ético, preparando ciudadanos responsables y comprometidos con la sociedad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Beneficios -->
+    <section id="beneficios" class="py-20 bg-gray-50 relative overflow-hidden">
+        <!-- Efectos de fondo sutiles -->
+        <div class="absolute inset-0">
+            <div class="geometric-background"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-3xl md:text-5xl font-black text-ib-blue-800 mb-6">
+                    Beneficios <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-yellow">Clave del Programa</span>
+                </h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-accent-cyan via-accent-yellow to-ib-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Descubre por qué miles de estudiantes en todo el mundo eligen el Programa del Diploma IB para su educación.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="premium-card group">
+                    <div class="premium-border"></div>
+                    <div class="premium-content">
+                        <div class="w-16 h-16 bg-gradient-to-r from-ib-blue-500 to-accent-cyan rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="brain" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ib-blue-800 mb-4">Desarrollo del Pensamiento Crítico</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Aprende a analizar, evaluar y sintetizar información de manera efectiva, preparándote para desafíos académicos y profesionales.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="premium-card group">
+                    <div class="premium-border premium-border-accent"></div>
+                    <div class="premium-content">
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent-yellow to-ib-blue-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="languages" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ib-blue-800 mb-4">Perspectiva Internacional</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Desarrolla una mentalidad global y aprecia la diversidad cultural, preparándote para un mundo interconectado.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="premium-card group">
+                    <div class="premium-border premium-border-secondary"></div>
+                    <div class="premium-content">
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent-cyan to-accent-yellow rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="target" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ib-blue-800 mb-4">Preparación Universitaria</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Obtén ventajas competitivas en admisiones universitarias y créditos académicos en instituciones de prestigio mundial.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="premium-card group">
+                    <div class="premium-border premium-border-tertiary"></div>
+                    <div class="premium-content">
+                        <div class="w-16 h-16 bg-gradient-to-r from-ib-blue-600 to-accent-cyan rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="lightbulb" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ib-blue-800 mb-4">Habilidades de Investigación</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Desarrolla competencias avanzadas en investigación académica a través de la Monografía Extendida y proyectos especializados.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="premium-card group">
+                    <div class="premium-border premium-border-quaternary"></div>
+                    <div class="premium-content">
+                        <div class="w-16 h-16 bg-gradient-to-r from-accent-yellow to-accent-cyan rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="heart" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ib-blue-800 mb-4">Compromiso Social</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Participa en proyectos de Creatividad, Actividad y Servicio (CAS) que fomentan el compromiso comunitario y el liderazgo.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="premium-card group">
+                    <div class="premium-border premium-border-quinary"></div>
+                    <div class="premium-content">
+                        <div class="w-16 h-16 bg-gradient-to-r from-ib-blue-500 to-accent-yellow rounded-xl flex items-center justify-center mb-6 shadow-lg">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-ib-blue-800 mb-4">Crecimiento Personal</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Desarrolla confianza, autonomía y habilidades de liderazgo que te acompañarán durante toda tu vida profesional.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section id="testimonios" class="py-20 bg-white relative overflow-hidden">
+        <!-- Efectos de fondo sutiles -->
+        <div class="absolute inset-0">
+            <div class="testimonial-background"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-3xl md:text-5xl font-black text-ib-blue-800 mb-6">
+                    Lo que Dicen <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-yellow">Nuestros Estudiantes</span>
+                </h2>
+                <div class="w-28 h-1 bg-gradient-to-r from-accent-cyan via-accent-yellow to-ib-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Conoce las experiencias de estudiantes que han completado el Programa del Diploma IB.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card group">
+                    <div class="testimonial-border"></div>
+                    <div class="testimonial-content">
+                        <div class="flex items-center mb-6">
+                            <div class="relative">
+                                <img src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="María González" class="w-16 h-16 rounded-full object-cover border-2 border-accent-cyan shadow-lg">
+                                <div class="absolute inset-0 rounded-full bg-accent-cyan/20 animate-pulse-soft"></div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-ib-blue-800">María González</h4>
+                                <p class="text-gray-500 text-sm">Estudiante IB, Universidad de Barcelona</p>
+                            </div>
+                        </div>
+                        <div class="flex text-accent-yellow mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 italic leading-relaxed">
+                            "El programa IB me dio las herramientas para pensar críticamente y abordar problemas complejos. Me siento completamente preparada para mi carrera universitaria."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card group">
+                    <div class="testimonial-border testimonial-border-accent"></div>
+                    <div class="testimonial-content">
+                        <div class="flex items-center mb-6">
+                            <div class="relative">
+                                <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Carlos Ruiz" class="w-16 h-16 rounded-full object-cover border-2 border-accent-yellow shadow-lg">
+                                <div class="absolute inset-0 rounded-full bg-accent-yellow/20 animate-pulse-soft"></div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-ib-blue-800">Carlos Ruiz</h4>
+                                <p class="text-gray-500 text-sm">Estudiante IB, Universidad Complutense</p>
+                            </div>
+                        </div>
+                        <div class="flex text-accent-yellow mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 italic leading-relaxed">
+                            "La perspectiva internacional del IB me abrió la mente. Ahora veo el mundo de manera diferente y me siento preparado para ser un ciudadano global."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card group">
+                    <div class="testimonial-border testimonial-border-secondary"></div>
+                    <div class="testimonial-content">
+                        <div class="flex items-center mb-6">
+                            <div class="relative">
+                                <img src="https://images.pexels.com/photos/3184303/pexels-photo-3184303.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop" alt="Ana Martínez" class="w-16 h-16 rounded-full object-cover border-2 border-ib-blue-500 shadow-lg">
+                                <div class="absolute inset-0 rounded-full bg-ib-blue-500/20 animate-pulse-soft"></div>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-ib-blue-800">Ana Martínez</h4>
+                                <p class="text-gray-500 text-sm">Madre de estudiante IB</p>
+                            </div>
+                        </div>
+                        <div class="flex text-accent-yellow mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <p class="text-gray-600 italic leading-relaxed">
+                            "Veo cómo mi hija ha crecido personal y académicamente. El programa IB no solo la preparó para la universidad, sino para la vida."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos Estudiantiles -->
+    <section id="proyectos" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+        <!-- Efectos de fondo sutiles -->
+        <div class="absolute inset-0">
+            <div class="projects-background"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-3xl md:text-5xl font-black text-ib-blue-800 mb-6">
+                    Proyectos <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-yellow">Estudiantiles</span>
+                </h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-accent-cyan via-accent-yellow to-ib-blue-500 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                    Descubre los increíbles proyectos realizados por nuestros estudiantes de grado 9 y 10, donde la creatividad se encuentra con el aprendizaje académico.
+                </p>
+            </div>
+            
+            <!-- Filtros de Proyectos -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active" data-filter="all">
+                    <i data-lucide="grid-3x3" class="w-4 h-4 mr-2"></i>
+                    Todos los Proyectos
+                </button>
+                <button class="filter-btn" data-filter="ciencias">
+                    <i data-lucide="flask-conical" class="w-4 h-4 mr-2"></i>
+                    Ciencias
+                </button>
+                <button class="filter-btn" data-filter="arte">
+                    <i data-lucide="palette" class="w-4 h-4 mr-2"></i>
+                    Arte y Diseño
+                </button>
+                <button class="filter-btn" data-filter="tecnologia">
+                    <i data-lucide="cpu" class="w-4 h-4 mr-2"></i>
+                    Tecnología
+                </button>
+                <button class="filter-btn" data-filter="humanidades">
+                    <i data-lucide="book-open" class="w-4 h-4 mr-2"></i>
+                    Humanidades
+                </button>
+            </div>
+            
+            <!-- Galería de Proyectos -->
+            <div class="gallery-grid" id="projects-gallery">
+                <!-- Proyecto 1 - Ciencias -->
+                <div class="gallery-item" data-category="ciencias">
+                    <div class="project-card group">
+                        <div class="project-image-container">
+                            <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto de Química Orgánica" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <h4 class="text-xl font-bold text-white mb-2">Síntesis de Compuestos Orgánicos</h4>
+                                    <p class="text-blue-100 mb-4">Investigación sobre reacciones químicas sostenibles</p>
+                                    <div class="flex gap-2">
+                                        <button class="overlay-btn" onclick="openProjectModal('proyecto1')">
+                                            <i data-lucide="eye" class="w-4 h-4"></i>
+                                        </button>
+                                        <button class="overlay-btn">
+                                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-badge ciencias">Grado 10 - Ciencias</div>
+                            <h3 class="project-title">Química Verde y Sostenibilidad</h3>
+                            <p class="project-description">Estudiante: María González</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 - Arte -->
+                <div class="gallery-item" data-category="arte">
+                    <div class="project-card group">
+                        <div class="project-image-container">
+                            <img src="https://images.pexels.com/photos/1183992/pexels-photo-1183992.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto de Arte Digital" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <h4 class="text-xl font-bold text-white mb-2">Arte Digital Interactivo</h4>
+                                    <p class="text-blue-100 mb-4">Exploración de medios digitales y expresión artística</p>
+                                    <div class="flex gap-2">
+                                        <button class="overlay-btn" onclick="openProjectModal('proyecto2')">
+                                            <i data-lucide="eye" class="w-4 h-4"></i>
+                                        </button>
+                                        <button class="overlay-btn">
+                                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-badge arte">Grado 9 - Arte</div>
+                            <h3 class="project-title">Expresión Digital Contemporánea</h3>
+                            <p class="project-description">Estudiante: Carlos Ruiz</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 - Tecnología -->
+                <div class="gallery-item" data-category="tecnologia">
+                    <div class="project-card group">
+                        <div class="project-image-container">
+                            <img src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto de Robótica" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <h4 class="text-xl font-bold text-white mb-2">Robot Asistente Educativo</h4>
+                                    <p class="text-blue-100 mb-4">Desarrollo de tecnología para el aprendizaje</p>
+                                    <div class="flex gap-2">
+                                        <button class="overlay-btn" onclick="openProjectModal('proyecto3')">
+                                            <i data-lucide="eye" class="w-4 h-4"></i>
+                                        </button>
+                                        <button class="overlay-btn">
+                                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-badge tecnologia">Grado 10 - Tecnología</div>
+                            <h3 class="project-title">Innovación en Robótica</h3>
+                            <p class="project-description">Estudiante: Ana Martínez</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 4 - Humanidades -->
+                <div class="gallery-item" data-category="humanidades">
+                    <div class="project-card group">
+                        <div class="project-image-container">
+                            <img src="https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto de Historia" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <h4 class="text-xl font-bold text-white mb-2">Memoria Histórica Digital</h4>
+                                    <p class="text-blue-100 mb-4">Preservación de testimonios históricos locales</p>
+                                    <div class="flex gap-2">
+                                        <button class="overlay-btn" onclick="openProjectModal('proyecto4')">
+                                            <i data-lucide="eye" class="w-4 h-4"></i>
+                                        </button>
+                                        <button class="overlay-btn">
+                                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-badge humanidades">Grado 9 - Historia</div>
+                            <h3 class="project-title">Archivo Digital Comunitario</h3>
+                            <p class="project-description">Estudiante: Diego López</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 5 - Ciencias -->
+                <div class="gallery-item" data-category="ciencias">
+                    <div class="project-card group">
+                        <div class="project-image-container">
+                            <img src="https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto de Biología" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <h4 class="text-xl font-bold text-white mb-2">Ecosistemas Urbanos</h4>
+                                    <p class="text-blue-100 mb-4">Estudio de biodiversidad en entornos urbanos</p>
+                                    <div class="flex gap-2">
+                                        <button class="overlay-btn" onclick="openProjectModal('proyecto5')">
+                                            <i data-lucide="eye" class="w-4 h-4"></i>
+                                        </button>
+                                        <button class="overlay-btn">
+                                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-badge ciencias">Grado 10 - Biología</div>
+                            <h3 class="project-title">Biodiversidad y Ciudad</h3>
+                            <p class="project-description">Estudiante: Laura Fernández</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 6 - Arte -->
+                <div class="gallery-item" data-category="arte">
+                    <div class="project-card group">
+                        <div class="project-image-container">
+                            <img src="https://images.pexels.com/photos/1183986/pexels-photo-1183986.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Proyecto de Escultura" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content">
+                                    <h4 class="text-xl font-bold text-white mb-2">Escultura Sostenible</h4>
+                                    <p class="text-blue-100 mb-4">Arte con materiales reciclados y sostenibles</p>
+                                    <div class="flex gap-2">
+                                        <button class="overlay-btn" onclick="openProjectModal('proyecto6')">
+                                            <i data-lucide="eye" class="w-4 h-4"></i>
+                                        </button>
+                                        <button class="overlay-btn">
+                                            <i data-lucide="external-link" class="w-4 h-4"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-badge arte">Grado 9 - Arte</div>
+                            <h3 class="project-title">Arte y Sostenibilidad</h3>
+                            <p class="project-description">Estudiante: Sofía Morales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para Proyectos -->
+    <div id="project-modal" class="modal-overlay hidden">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="modal-title" class="text-2xl font-bold text-ib-blue-800"></h3>
+                <button id="close-modal" class="modal-close-btn">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div id="modal-body">
+                    <!-- Contenido dinámico del modal -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección CTA -->
+    <section class="py-20 bg-gradient-to-r from-ib-blue-800 via-ib-blue-700 to-ib-blue-600 relative overflow-hidden">
+        <!-- Efectos de fondo sutiles -->
+        <div class="absolute inset-0">
+            <div class="cta-effects"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="section-reveal">
+                <h2 class="text-3xl md:text-5xl font-black text-white mb-6">
+                    ¿Listo para Comenzar tu <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-cyan to-accent-yellow">Viaje Educativo</span>?
+                </h2>
+                <div class="w-40 h-1 bg-gradient-to-r from-accent-cyan via-accent-yellow to-white mx-auto mb-8"></div>
+                <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Únete a miles de estudiantes que han transformado su futuro con el Programa del Diploma IB.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <button class="enhanced-button-primary group relative overflow-hidden">
+                        <span class="relative z-10">Solicitar Información</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-accent-cyan to-accent-yellow opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </button>
+                    <button class="enhanced-button-secondary group relative overflow-hidden">
+                        <span class="relative z-10">Descargar Brochure</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-gray-900 text-white py-16 relative overflow-hidden">
+        <!-- Efectos de fondo sutiles -->
+        <div class="absolute inset-0">
+            <div class="footer-pattern"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo y descripción -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-accent-cyan to-accent-yellow rounded-lg flex items-center justify-center shadow-lg">
+                            <i data-lucide="graduation-cap" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <span class="ml-3 text-2xl font-black text-white">IB Diploma</span>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md leading-relaxed">
+                        Empoderando estudiantes con educación de calidad mundial a través del Programa del Diploma del Bachillerato Internacional®.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Enlaces rápidos -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-accent-cyan">Enlaces Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#programa" class="text-gray-400 hover:text-accent-cyan transition-all duration-300">Programa</a></li>
+                        <li><a href="#beneficios" class="text-gray-400 hover:text-accent-cyan transition-all duration-300">Beneficios</a></li>
+                        <li><a href="#proyectos" class="text-gray-400 hover:text-accent-cyan transition-all duration-300">Proyectos</a></li>
+                        <li><a href="#testimonios" class="text-gray-400 hover:text-accent-cyan transition-all duration-300">Testimonios</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent-cyan transition-all duration-300">Recursos</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Información de contacto -->
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-accent-cyan">Contacto</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center group">
+                            <i data-lucide="phone" class="w-5 h-5 text-accent-cyan mr-3 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-gray-400 group-hover:text-white transition-colors">980 692 282</span>
+                        </div>
+                        <div class="flex items-center group">
+                            <i data-lucide="mail" class="w-5 h-5 text-accent-cyan mr-3 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-gray-400 group-hover:text-white transition-colors">admision@elpinarcollege.edu.pe</span>
+                        </div>
+                        <div class="flex items-start group">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-accent-cyan mr-3 mt-1 group-hover:scale-110 transition-transform"></i>
+                            <span class="text-gray-400 group-hover:text-white transition-colors">Calle los Quenuales, 123<br>Urb. El Pinar, Huaraz</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2026 Programa del Diploma. Todos los derechos reservados. 
+                    <span class="text-sm block mt-2">Bachillerato Internacional® es una marca registrada de la Organización del Bachillerato Internacional.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
