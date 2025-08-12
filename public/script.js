@@ -54,10 +54,10 @@ function initNavbarScroll() {
     if (navbar) {
         window.addEventListener('scroll', function() {
             if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.background = 'rgba(17, 24, 39, 0.98)';
                 navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
             } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.background = 'rgba(17, 24, 39, 0.95)';
                 navbar.style.boxShadow = 'none';
             }
         });
